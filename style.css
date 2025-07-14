@@ -1,0 +1,309 @@
+﻿/* -------------------------
+   1. CONFIGURAÇÕES GERAIS
+-------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fffaf3;
+  color: #4e3b2a;
+  line-height: 1.6;
+}
+
+/* -------------------------
+   2. CABEÇALHO (HEADER)
+-------------------------- */
+header {
+  background-color: #ffe8cc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+
+.logo {
+  height: 40px;
+  filter: drop-shadow(0 0 5px #ffd9a0);
+  transition: transform 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #f5cbaa);
+}
+
+.nome-site {
+  font-size: 3em;
+  color: #6b4f3b;
+  font-family: 'Dancing Script', cursive;
+  white-space: nowrap;
+  text-shadow: 1px 1px 2px #ffe3b3, 0 0 10px #ffd9a0;
+}
+
+/* -------------------------
+   3. MENU DE NAVEGAÇÃO
+-------------------------- */
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #6b4f3b;
+  font-weight: bold;
+  padding: 6px 12px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.menu a:hover {
+  background-color: #ffdab9;
+}
+
+.menu a:active {
+  background-color: #e1a869;
+  transform: scale(0.95);
+}
+
+/* -------------------------
+   4. BANNER
+-------------------------- */
+.banner img {
+  width: 100%;
+  display: block;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+/* -------------------------
+   5. SEÇÃO DESTAQUES
+-------------------------- */
+.destaques {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.destaques h2 {
+  margin-bottom: 30px;
+  font-size: 2em;
+  color: #a0603c;
+}
+
+/* Destaques com imagem à esquerda */
+.destaque-esquerda {
+  display: flex;
+  align-items: center;
+  background-color: #fffaf3;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.destaque-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 8px;
+}
+
+.destaque-texto h3 {
+  margin: 0;
+  font-size: 1.5em;
+  color: #6b4f3b;
+}
+
+.destaque-texto p {
+  margin-top: 5px;
+  color: #4e3b2a;
+}
+
+/* -------------------------
+   6. PRODUTOS EM GRADE
+-------------------------- */
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.produto {
+  background-color: #ffe8cc;
+  padding: 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.produto:hover {
+  transform: translateY(-4px);
+}
+
+/* -------------------------
+   7. RODAPÉ
+-------------------------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffe8cc;
+  font-size: 0.9em;
+  margin-top: 60px;
+}
+@media (max-width: 768px) {
+  .logo-area {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .destaque-esquerda {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .destaque-img {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
+.redes-sociais-topo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 10px;
+  padding-right: 20px;
+}
+
+.redes-sociais-topo img {
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: drop-shadow(0 0 6px #d9a86c99);
+}
+
+.redes-sociais-topo img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 10px #d9a86ccc);
+}
+.botoes-redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.botoes-redes img {
+  width: 240px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.botoes-redes img:hover {
+  transform: scale(1.05);
+}
+
+/* -------------------------
+   CARDÁPIO MELHORADO
+-------------------------- */
+
+.produto-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff4e0;
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.produto-info {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+.produto-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+
+.btn-pedir {
+  background-color: #e1a869;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: background-color 0.2s ease;
+}
+
+.btn-pedir:hover {
+  background-color: #c58a47;
+}
+
+/* -------------------------
+   PÁGINA SOBRE
+-------------------------- */
+.sobre {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 20px;
+  background-color: #fff4e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  text-align: center;
+}
+
+.sobre h2 {
+  font-size: 2.2em;
+  color: #a0603c;
+  margin-bottom: 20px;
+}
+
+.sobre p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #4e3b2a;
+  margin-bottom: 20px;
+}
+
+.sobre img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-top: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+
